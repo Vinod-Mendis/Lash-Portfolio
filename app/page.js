@@ -2,6 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { gsap } from "gsap";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Songs from "@/components/Songs";
+import Performances from "@/components/Performances";
+import Contact from "@/components/Contact";
 
 function Page() {
   const [currentValue, setCurrentValue] = useState(0);
@@ -31,14 +36,14 @@ function Page() {
     const initialDelay = 200; // 200 ms
     setTimeout(updateCounter, initialDelay);
 
-    // GSAP animation
-    gsap.to(".counter", { // counter disapper animation
+    // GSAP animations
+    gsap.to(".counter", {
       delay: 5,
       opacity: 0,
       duration: 0.25,
     });
 
-    gsap.to(".upperdiv", { // whole preloader disappear animation
+    gsap.to(".upperdiv", {
       delay: 6,
       opacity: 0,
       duration: 1,
@@ -51,16 +56,20 @@ function Page() {
 
   return (
     <>
-      <div className="upperdiv bg-[#dedede] w-screen h-screen flex flex-col items-center justify-center absolute inset-0 z-10">
-        <h1 className="text-sm font-bold justify-center md:text-2xl md:font-semibold">
+      <div className="upperdiv fixed bg-[#fe6767] min-h-screen flex flex-col items-center justify-center inset-0 z-10 overflow-y-auto">
+        <h1 className="text-sm font-bold justify-center w-fit md:text-2xl md:font-semibold">
           FORGET ME, DON`T FORGET US.
         </h1>
         <div className="counter absolute bottom-0 w-full text-center mb-10">
           <h1>{currentValue}.</h1>
         </div>
       </div>
-      <div className="relative z-0 bg-red-400">
-        <div className="text-center mt-20">this div should be under</div>
+      <div className="relative z-0">
+        <Hero/>
+        <About/>
+        <Songs/>
+        <Performances/>
+        <Contact/>
       </div>
     </>
   );
