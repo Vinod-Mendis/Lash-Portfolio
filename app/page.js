@@ -1,75 +1,20 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { gsap } from "gsap";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Songs from "@/components/Songs";
 import Performances from "@/components/Performances";
 import Contact from "@/components/Contact";
+import Preloader from "@/components/Preloader";
 
 function Page() {
-  const [currentValue, setCurrentValue] = useState(0);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    function updateCounter() {
-      if (!isMounted) return;
-
-      if (currentValue === 100) {
-        return;
-      }
-
-      let newValue = currentValue + Math.floor(Math.random() * 10) + 1; // increment of random value
-      if (newValue > 100) {
-        newValue = 100;
-      }
-
-      setCurrentValue(newValue);
-
-      let delay = Math.floor(Math.random() * 200) + 50;
-      setTimeout(updateCounter, delay);
-    }
-
-    // Initial delay before starting the counter
-    const initialDelay = 200; // 200 ms
-    setTimeout(updateCounter, initialDelay);
-
-    // GSAP animations
-    gsap.to(".counter", {
-      delay: 5,
-      opacity: 0,
-      duration: 0.25,
-    });
-
-    gsap.to(".upperdiv", {
-      delay: 6,
-      opacity: 0,
-      duration: 1,
-    });
-
-    return () => {
-      isMounted = false;
-    };
-  }, [currentValue]);
-
   return (
     <>
-      <div className="upperdiv fixed bg-[#fe6767] min-h-screen flex flex-col items-center justify-center inset-0 z-10 overflow-y-auto">
-        <h1 className="text-sm font-bold justify-center w-fit md:text-2xl md:font-semibold">
-          FORGET ME, DON`T FORGET US.
-        </h1>
-        <div className="counter absolute bottom-0 w-full text-center mb-10">
-          <h1>{currentValue}.</h1>
-        </div>
-      </div>
+      <Preloader />
       <div className="relative z-0">
-        <Hero/>
-        <About/>
-        <Songs/>
-        <Performances/>
-        <Contact/>
+        <Hero />
+        <About />
+        <Songs />
+        <Performances />
+        <Contact />
       </div>
     </>
   );
