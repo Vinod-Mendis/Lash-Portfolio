@@ -42,6 +42,10 @@ function Preloader() {
       delay: 6,
       opacity: 0,
       duration: 0.4,
+      ease: "power1.easeOut",
+      onComplete: function () {
+        document.querySelector(".upperdiv").style.display = "none";
+      },
     });
 
     return () => {
