@@ -9,7 +9,7 @@ import Hero from "@/components/Hero";
 function Page() {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <div className="relative z-0">
         <Hero/>
         <About />

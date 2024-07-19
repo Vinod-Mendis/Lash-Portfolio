@@ -1,10 +1,35 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { gsap } from "gsap";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Preloader() {
   const [currentValue, setCurrentValue] = useState(0);
+
+  const preloader = useRef();
+  const counter = useRef();
+
+  useGSAP(() => {
+    // GSAP animations
+    gsap.to(counter.current, {
+      delay: 4.5,
+      opacity: 0,
+      duration: 1,
+    });
+
+    gsap.to(preloader.current, {
+      delay: 6,
+      opacity: 0,
+      duration: 0.4,
+      ease: "power1.easeOut",
+      onComplete: () => {
+        if (preloader.current) {
+          preloader.current.style.display = "none";
+        }
+      },
+    });
+  });
 
   useEffect(() => {
     let isMounted = true;
@@ -31,33 +56,19 @@ function Preloader() {
     const initialDelay = 200; // 200 ms
     setTimeout(updateCounter, initialDelay);
 
-    // GSAP animations
-    gsap.to(".counter", {
-      delay: 4.8,
-      opacity: 0,
-      duration: 0.25,
-    });
-
-    gsap.to(".upperdiv", {
-      delay: 6,
-      opacity: 0,
-      duration: 0.4,
-      ease: "power1.easeOut",
-      onComplete: function () {
-        document.querySelector(".upperdiv").style.display = "none";
-      },
-    });
-
     return () => {
       isMounted = false;
     };
   }, [currentValue]);
   return (
-    <div className="upperdiv fixed bg-[#dedede] min-h-screen flex flex-col items-center justify-center inset-0 z-10 overflow-y-auto">
+    <div
+      ref={preloader}
+      className="fixed bg-[#dedede] min-h-screen flex flex-col items-center justify-center inset-0 z-10 overflow-y-auto"
+    >
       <h1 className="text-sm font-bold justify-center w-fit md:text-2xl md:font-semibold">
         FORGET ME, DON`T FORGET US.
       </h1>
-      <div className="counter absolute bottom-0 w-full text-center mb-10">
+      <div ref={counter} className="absolute bottom-0 w-full text-center mb-10">
         <h1>{currentValue}.</h1>
       </div>
     </div>
