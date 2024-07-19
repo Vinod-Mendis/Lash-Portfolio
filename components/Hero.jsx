@@ -23,7 +23,7 @@ function Hero() {
         y: "0%", // End position (inside the container)
         duration: 1, // Duration of the animation
         ease: "power1.out", // Easing function
-        delay: 1, // Delay before this animation starts
+        delay: 6.5, // Delay before this animation starts
       }
     )
       .fromTo(
