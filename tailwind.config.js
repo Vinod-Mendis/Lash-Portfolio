@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "desktop-gradient":
+          "linear-gradient(to left, rgba(16, 16, 16, 1) , rgba(252, 252, 252, 0) 70%), linear-gradient(to top, rgba(16, 16, 16, 1), rgba(252, 252, 252, 0) 50%)",
+        "mobile-gradient":
+          "linear-gradient(to top, rgba(16, 16, 16, 1), rgba(252, 252, 252, 0) 50%)",
+      },
     },
   },
   plugins: [],
