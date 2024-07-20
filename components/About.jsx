@@ -13,36 +13,36 @@ function About() {
   const wave = useRef();
   const text_reveal = useRef();
 
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useGSAP(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    const splitTypes = document.querySelectorAll(".reveal_type");
+  //   const splitTypes = document.querySelectorAll(".reveal_type");
 
-    splitTypes.forEach((char, i) => {
-      const text = new SplitType(char, { type: "chars" });
+  //   splitTypes.forEach((char, i) => {
+  //     const text = new SplitType(char, { type: "chars" });
 
-      gsap.from(text.chars, {
-        scrollTrigger: {
-          trigger: char,
-          start: "top 80%",
-          end: "top 20%",
-          scrub: true,
-          markers: false,
-        },
-        opacity: 0.2,
-        stagger: 0.1,
-      });
-    });
+  //     gsap.from(text.chars, {
+  //       scrollTrigger: {
+  //         trigger: char,
+  //         start: "top 80%",
+  //         end: "top 20%",
+  //         scrub: true,
+  //         markers: false,
+  //       },
+  //       opacity: 0.2,
+  //       stagger: 0.1,
+  //     });
+  //   });
 
-    gsap.to(wave.current, {
-      rotation: 40, // Rotate to 40 degrees
-      duration: 0.8, // Duration to reach 40 degrees
-      ease: "power1.inOut", // Smooth easing in and out
-      repeat: -1, // Repeat indefinitely
-      yoyo: true, // Alternate between 0 and 40 degrees
-      transformOrigin: "right bottom", // Set the origin of rotation
-    });
-  });
+  //   gsap.to(wave.current, {
+  //     rotation: 40, // Rotate to 40 degrees
+  //     duration: 0.8, // Duration to reach 40 degrees
+  //     ease: "power1.inOut", // Smooth easing in and out
+  //     repeat: -1, // Repeat indefinitely
+  //     yoyo: true, // Alternate between 0 and 40 degrees
+  //     transformOrigin: "right bottom", // Set the origin of rotation
+  //   });
+  // });
 
   return (
     <div className="h-full bg-slate-white ">
@@ -77,18 +77,18 @@ function About() {
       </div>
       <div className="w-full h-px bg-black my-[20px] md:my-[30px]"></div>
       <div className="w-full relative">
-        <video autoPlay muted loop className="hidden md:flex w-full h-full ">
+        <video muted loop className="hidden md:flex w-full h-full ">
           <source src="/videos/about_video_2.mp4" type="video/mp4" />
         </video>
-        <video autoPlay muted loop className="flex md:hidden w-full h-full ">
+        <video muted loop className="flex md:hidden w-full h-full ">
           <source src="/videos/mobile_about_video.mp4" type="video/mp4" />
         </video>
         <div className="w-full h-full flex justify-center items-center absolute top-0">
           <div className="text-[#dedede] flex flex-col items-center justify-center h-full">
-            <h1 className="text-center w-full text-[82px] md:text-[100px] font-semibold leading-none">
+            <h1 className="text-center w-full text-[74px] md:text-[100px] font-semibold leading-none">
               Musician.
             </h1>
-            <Link href={'/'}>
+            <Link href={'/about'}>
               <button className=" font-semibold md:mt-0 mt-3 text-xl border-2 px-14 py-2 md:py-1 rounded-full flex justify-center items-center">
                 more
               </button>

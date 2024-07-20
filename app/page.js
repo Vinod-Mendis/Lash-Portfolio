@@ -10,6 +10,8 @@ import { useEffect } from "react";
 
 function Page() {
   useEffect(() => {
+    // window.scrollTo(0, 0); // scrolls to top of the page on each refresh
+
     // beta locomotive-scroll v5
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default; // imported in a useEffect hook, becuase it tries to access the window and in next js at first it wont exist because it initially runs in the server before going to the client
@@ -20,8 +22,8 @@ function Page() {
 
   return (
     <>
-      <Preloader />
-      <div className="relative z-0 ">
+      {/* <Preloader /> */}
+      <div className="relative z-0 md:overflow-x-hidden">
         <Hero />
         <About />
         <Songs />
