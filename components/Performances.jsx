@@ -5,7 +5,7 @@ import image1 from "../public/images/image_1.png";
 import image2 from "../public/images/image_2.png";
 import image3 from "../public/images/image_3.png";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -16,8 +16,9 @@ const images = {
 };
 
 function Performances() {
+  const imageRefs = useRef([]);
 
-  useGSAP(() => {
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const splitTypes = document.querySelectorAll(".reveal_type");
@@ -37,23 +38,41 @@ function Performances() {
         stagger: 0.1,
       });
     });
-    
-  });
+
+    imageRefs.current.forEach((image, index) => {
+      if (image) {
+        gsap.fromTo(
+          image,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            scrollTrigger: {
+              trigger: image,
+              start: "top 90%",
+              end: "top 75%",
+              toggleActions: "play none none reverse",
+              markers: false,
+            },
+            delay: index * 0.3,
+          }
+        );
+      }
+    });
+  }, []);
 
   return (
     <div className="h-full lg:h-screen bg-[#101010] relative overflow-hidden">
-      {/* Header section
-      ------------------------------------------------------------ */}
+      {/* Header section */}
       <div className="w-full pt-5 flex flex-col px-[20px] md:px-[100px] absolute z-30">
         <h1 className="text-white text-[30px] font-semibold">Performances</h1>
         <div className="w-full h-px bg-white mb-10"></div>
       </div>
 
-      {/* under content 
-      --------------------------------------------------------------*/}
+      {/* Under content */}
       <div className="flex flex-col lg:flex-row h-full relative">
-        {/* left-container
-        ---------------------------------------------- */}
+        {/* Left-container */}
         <div className="relative">
           <video autoPlay muted loop className="w-full h-auto md:flex z-10">
             <source src="/videos/performance_video.mp4" type="video/mp4" />
@@ -72,12 +91,11 @@ function Performances() {
           </div>
         </div>
 
-        {/* right-container
-        ---------------------------------------------- */}
+        {/* Right-container */}
         <div className="text-white mb-10 md:mb-10 md:pr-[100px] w-full md:items-end flex flex-col px-[20px] md:mt-[140px] justify-center">
           <div className="flex gap-4">
-            {Object.entries(images).map(([key, src]) => (
-              <div key={key}>
+            {Object.entries(images).map(([key, src], index) => (
+              <div key={key} ref={(el) => (imageRefs.current[index] = el)}>
                 <Image src={src} alt={key} width={300} height={300} />
               </div>
             ))}
