@@ -35,7 +35,7 @@ function Songs() {
   });
 
   return (
-    <div className="h-full  md:px-[100px] relative pb-10">
+    <div className="h-full  md:px-[100px] relative pb-10" id="songs">
       {/* header-section
       ---------------------------------------------------------------- */}
       <div className="flex w-full justify-between pt-10 mb-2 px-[20px]">

@@ -1,6 +1,24 @@
 const { version } = require("react");
 
 const content = {
+  nav_items: {
+    about: {
+      text: "About",
+      route: "#about",
+    },
+    songs: {
+      text: "Songs",
+      route: "#songs",
+    },
+    performances: {
+      text: "Performances",
+      route: "#performances",
+    },
+    reach_out: {
+      text: "Reach out",
+      route: "#reach-out",
+    },
+  },
   songs: {
     song_1: {
       cover: "/images/hitOchcham_acoustic.png",
@@ -38,6 +56,24 @@ const content = {
         image_2: "/",
         image_3: "/",
       },
+    },
+  },
+  socials: {
+    instagram: {
+      logo: '/icons/instagram.svg',
+      link: 'https://www.instagram.com/______lashan_herath_/'
+    },
+    facebook: {
+      logo: '/icons/facebook.svg',
+      link: 'https://web.facebook.com/wizard.6000/?_rdc=1&_rdr'
+    },
+    youtube: {
+      logo: '/icons/youtube.svg',
+      link: 'https://www.youtube.com/channel/UCOVJ5R_XeTs4TU0FohaXG6w'
+    },
+    spotify: {
+      logo: '/icons/spotify.svg',
+      link: 'https://open.spotify.com/artist/2GKt5532rbjOVlrGyvVHcC?si=SivOnKxnSjSBxNG3wHBDZg'
     },
   },
 };

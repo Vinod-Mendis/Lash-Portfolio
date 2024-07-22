@@ -65,7 +65,7 @@ function Performances() {
   }, []);
 
   return (
-    <div className="h-full lg:h-screen bg-[#101010] relative overflow-hidden">
+    <div className="h-full lg:h-screen bg-[#101010] relative overflow-hidden" id="performances">
       {/* Header section */}
       <div className="w-full pt-5 flex flex-col px-[20px] md:px-[100px] absolute z-30">
         <h1 className="text-white text-[30px] font-semibold">Performances</h1>

@@ -11,3 +11,7 @@
 .hero {
   background-image: url('/public/images/hero_section_background.jpeg');
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -45,7 +45,7 @@ function About() {
   });
 
   return (
-    <div className="h-full bg-slate-white ">
+    <div className="h-full bg-slate-white " id="about">
       <div className="px-[25px] md:px-[100px]">
         <div className="flex justify-center w-full ">
           <Image

@@ -85,7 +85,7 @@ function Contact() {
   });
 
   return (
-    <div className="h-full md:h-screen bg-[#101010] relative">
+    <div className="h-full md:h-screen bg-[#101010] relative" id="reach-out">
       <div className="pt-2 justify-center flex flex-row items-center px-[20px] md:px-[100px] lg:gap-24 gap-12 w-full md:absolute md:z-10 ">
         <h1
           ref={reach}
