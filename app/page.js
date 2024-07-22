@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 function Page() {
   useEffect(() => {
-    // window.scrollTo(0, 0); // scrolls to top of the page on each refresh
+    window.scrollTo(0, 0); // scrolls to top of the page on each refresh
 
     // beta locomotive-scroll v5
     (async () => {
@@ -22,7 +22,7 @@ function Page() {
 
   return (
     <>
-      {/* <Preloader /> */}
+      <Preloader />
       <div className="relative z-0 md:overflow-x-hidden">
         <Hero />
         <About />

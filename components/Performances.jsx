@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import SplitType from "split-type";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const images = {
   image_1: image1,
@@ -18,10 +19,10 @@ const images = {
 function Performances() {
   const imageRefs = useRef([]);
 
-  useEffect(() => {
+  useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const splitTypes = document.querySelectorAll(".reveal_type");
+    const splitTypes = document.querySelectorAll(".reveal_type_3");
 
     splitTypes.forEach((char, i) => {
       const text = new SplitType(char, { type: "chars" });
@@ -56,6 +57,7 @@ function Performances() {
               markers: false,
             },
             delay: index * 0.3,
+            scrub: true,
           }
         );
       }
@@ -107,7 +109,7 @@ function Performances() {
               <h1 className="text-[48px] font-bold">MARCH</h1>
             </div>
           </div>
-          <p className="text-justify w-full h-full font-extralight leading-relaxed reveal_type">
+          <p className="text-justify w-full h-full font-regular leading-relaxed reveal_type_3">
             Premadari, a mesmerizing cinematic musical concert, took place on
             March 16th, showcasing a diverse lineup of talented artists
             including Me. The evening unfolded with spellbinding performances

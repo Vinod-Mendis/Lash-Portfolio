@@ -5,7 +5,7 @@ import SplitType from "split-type";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
-import play from "../public/icons/play_icon.png";
+import play from "../public/icons/play_2.svg";
 import Image from "next/image";
 import content from "@/content/content";
 import "../app/globals.css";
@@ -15,7 +15,7 @@ function Songs() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const splitTypes = document.querySelectorAll(".reveal_type");
+    const splitTypes = document.querySelectorAll(".reveal_type_2");
 
     splitTypes.forEach((char, i) => {
       const text = new SplitType(char, { type: "chars" });
@@ -24,7 +24,7 @@ function Songs() {
         scrollTrigger: {
           trigger: char,
           start: "top 100%",
-          end: "top 40%",
+          end: "top 60%",
           scrub: true,
           markers: false,
         },
@@ -41,9 +41,9 @@ function Songs() {
       <div className="flex w-full justify-between pt-10 mb-2 px-[20px]">
         <h1 className="text-[30px] font-semibold">Songs</h1>
         <Link href={"/songs"}>
-          <button className="flex gap-1 items-center border-2 border-black px-5 py-1 rounded-full">
+          <button className="bg-white active:invert-0 hover:invert transition flex gap-2 items-center border-2 border-black px-5 py-1 rounded-full">
             <p>Listen</p>
-            <Image src={play} alt="play_icon" width={20} height={20} />
+            <Image src={play} alt="play_icon" width={10} height={10} />
           </button>
         </Link>
       </div>
@@ -71,7 +71,7 @@ function Songs() {
 
       {/* Paragraph with reveal animation
       --------------------------------------------------------------------------------- */}
-      <p className="px-[20px] reveal_type text-[26px] md:text-[28px] font-semibold leading-tight md:leading-normal w-[90%] md:w-[530px] mt-10 mb-3">
+      <p className="px-[20px] reveal_type_2 text-[26px] md:text-[28px] font-semibold leading-tight md:leading-normal w-[90%] md:w-[530px] mt-10 mb-3">
         Music is a world with a language we all understand, giving everyone a
         chance to sing, dance, and clap. A record's groove doesn't guarantee
         it's in the groove, but you can tell when people start to move.
@@ -81,9 +81,9 @@ function Songs() {
       ------------------------------------------------------------------------------- */}
       <div className="px-[20px] flex flex-row items-center md:gap-2 w-full md:justify-center justify-end">
         <Link href={"/songs"}>
-          <button className="flex gap-1 items-center border-2 border-black px-3 md:px-6 py-1 md:py-2 rounded-full">
+          <button className="flex gap-2 active:invert-0 items-center border-2 border-black px-3 md:px-6 py-1 md:py-2 rounded-full bg-white hover:invert transition">
             <p className="font-semibold">Harmonhear</p>
-            <Image className="md:w-14" src={play} alt="play_icon" width={100} height={100} />
+            <Image src={play} alt="play_icon" width={10} height={10}/>
           </button>
         </Link>
         <div className="flex md:flex-row flex-col w-full items-end md:items-center pt-6 md:pt-0 gap-2">

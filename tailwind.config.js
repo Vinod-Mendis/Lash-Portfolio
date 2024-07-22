@@ -12,6 +12,8 @@ module.exports = {
           "linear-gradient(to left, rgba(16, 16, 16, 1) , rgba(252, 252, 252, 0) 70%), linear-gradient(to top, rgba(16, 16, 16, 1), rgba(252, 252, 252, 0) 50%)",
         "mobile-gradient":
           "linear-gradient(to top, rgba(16, 16, 16, 1), rgba(252, 252, 252, 0) 50%)",
+        "mobile-contact-gradient":
+          "linear-gradient(to top, rgba(16, 16, 16, 1), rgba(252, 252, 252, 0) 40%),linear-gradient(to bottom, rgba(16, 16, 16, 1), rgba(252, 252, 252, 0) 30%)",
       },
     },
   },
