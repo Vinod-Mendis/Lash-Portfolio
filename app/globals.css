@@ -12,6 +12,18 @@
   background-image: url('/public/images/hero_section_background.jpeg');
 }
 
-html {
-  scroll-behavior: smooth;
+/* Default Navbar Style */
+.navbar {
+  transition: background-color 0.3s ease;
 }
+
+/* Inverted Navbar Style */
+.navbar-inverted {
+  color: #101010; /* Dark background */
+  /* backdrop-filter: blur(8px); */
+}
+.navbar-inverted2 {
+  color: white; /* Dark background */
+  /* backdrop-filter: blur(8px); */
+}
+
