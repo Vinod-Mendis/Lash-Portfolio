@@ -10,10 +10,11 @@ import Link from "next/link";
 
 
 import "../app/globals.css";
+import Marquee from "react-fast-marquee";
 
 function Footer() {
   return (
-    <div className="bg-[#101010] relative">
+    <div className="bg-[#101010] relative z-30">
       <div className="md:flex md:justify-between md:pb-16 md:px-[100px] md:pt-10 relative z-10">
         {/* --------------------- */}
         <div className="md:w-[400px] ">
@@ -61,19 +62,15 @@ function Footer() {
       </div>
       {/* ------------------------------------------------ */}
       <div>
-        <marquee loop={0} className="w-full bg-[#dedede]">
+        <Marquee autoFill className="w-full bg-[#dedede]">
           <div className="flex py-5 uppercase">
             <p>
               • This website is not the official portfolio of Lashan Herath; it
               is solely for an academic project, developed with permission from
-              Lashan Herath • This website is not the official portfolio of
-              Lashan Herath; it is solely for an academic project, developed
-              with permission from Lashan Herath • This website is not the
-              official portfolio of Lashan Herath; it is solely for an academic
-              project, developed with permission from Lashan Herath
+              Lashan Herath &nbsp;
             </p>
           </div>
-        </marquee>
+        </Marquee>
       </div>
       <Image
         className="absolute bottom-[12%] z-0"

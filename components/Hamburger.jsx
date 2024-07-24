@@ -8,6 +8,8 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 
+import "../app/globals.css";
+
 function Hamburger() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const navItemsRef = useRef([]);
@@ -63,7 +65,7 @@ function Hamburger() {
   }, [dropdownOpen]);
 
   return (
-    <div className={`md:hidden ${isScrolled1 ? 'invert' : ''}`}>
+    <div className={`md:hidden ${isScrolled1 ? "invert" : ""}`}>
       {!dropdownOpen ? (
         <Image
           onClick={dropdown}
@@ -83,7 +85,7 @@ function Hamburger() {
         />
       )}
       <div className="absolute w-fit text-right right-0 px-[20px] pt-4">
-        <ul className={`gap-4 flex flex-col ${isScrolled1 ? 'invert' : ''}`}>
+        <ul className={`gap-4 flex flex-col ${isScrolled1 ? "invert" : ""}`}>
           {Object.entries(content.nav_items).map(([key, item], index) => (
             <Link href={item.route} key={key}>
               <li

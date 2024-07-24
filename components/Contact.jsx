@@ -86,7 +86,7 @@ function Contact() {
 
   return (
     <div className="h-full md:h-screen bg-[#101010] relative" id="reach-out">
-      <div className="pt-2 justify-center flex flex-row items-center px-[20px] md:px-[100px] lg:gap-24 gap-12 w-full md:absolute md:z-10 ">
+      <div className="pt-2 justify-center flex flex-row items-center px-[20px] md:px-[100px] lg:gap-24 gap-6 w-full md:absolute md:z-10 ">
         <h1
           ref={reach}
           className="text-5xl md:text-[100px] lg:text-[150px] font-bold text-[#dedede]"
@@ -121,13 +121,13 @@ function Contact() {
           <div className="absolute bg-mobile-contact-gradient top-0 w-full h-screen flex items-center justify-end px-[20px]"></div>
         </div>
         <div className="w-full md:w-1/2 md:mt-44">
-          <div className="px-[20px] flex gap-4 items-center mt-14 mb-6 md:mb-10">
+          <div className="px-[20px] md:pr-[100px] flex gap-4 items-center mt-14 mb-6 md:mb-10">
             <h1 className="font-regular text-white">
               Make your concert truly unforgettable!
             </h1>
             <Image src={next} alt="next_icon" width={20} height={20} />
           </div>
-          <form action="submit" className="px-[20px] flex flex-col gap-4 mb-5">
+          <form action="submit" className="px-[20px] md:pr-[100px] flex flex-col gap-4 mb-5">
             <div className="flex flex-col">
               <label className="text-gray-400">Your name</label>
               <input

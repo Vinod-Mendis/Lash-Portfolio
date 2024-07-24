@@ -4,19 +4,19 @@ const content = {
   nav_items: {
     about: {
       text: "About",
-      route: "#about",
+      route: "/#about",
     },
     songs: {
       text: "Songs",
-      route: "#songs",
+      route: "/#songs",
     },
     performances: {
       text: "Performances",
-      route: "#performances",
+      route: "/#performances",
     },
     reach_out: {
       text: "Reach out",
-      route: "#reach-out",
+      route: "/#reach-out",
     },
   },
   songs: {
@@ -75,6 +75,17 @@ const content = {
       logo: '/icons/spotify.svg',
       link: 'https://open.spotify.com/artist/2GKt5532rbjOVlrGyvVHcC?si=SivOnKxnSjSBxNG3wHBDZg'
     },
+  },
+  marquee_images : {
+    image1: "/images/marquee/m1.jpg",
+    image2: "/images/marquee/m2.jpg",
+    image3: "/images/marquee/m3.jpeg",
+    image4: "/images/marquee/m4.jpg",
+    image5: "/images/marquee/m5.jpeg",
+    image6: "/images/marquee/m6.jpg",
+    image7: "/images/marquee/m7.jpg",
+    image8: "/images/marquee/m8.jpg",
+    image9: "/images/marquee/m9.jpg",
   },
 };
 

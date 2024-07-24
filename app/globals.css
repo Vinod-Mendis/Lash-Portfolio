@@ -20,10 +20,13 @@
 /* Inverted Navbar Style */
 .navbar-inverted {
   color: #101010; /* Dark background */
-  /* backdrop-filter: blur(8px); */
+  backdrop-filter: blur(8px);
 }
 .navbar-inverted2 {
   color: white; /* Dark background */
-  /* backdrop-filter: blur(8px); */
+  backdrop-filter: blur(8px);
+}
+.hamburger {
+  backdrop-filter: blur(8px);
 }
 
