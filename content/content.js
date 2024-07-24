@@ -24,21 +24,25 @@ const content = {
       cover: "/images/hitOchcham_acoustic.png",
       name: "HithOchcham",
       ver: "acoustic",
+      id: 1,
     },
     song_2: {
       cover: "/images/hithOchcham.jpg",
       name: "HithOchcham",
-      ver: "Original",
+      ver: "original",
+      id: 2,
     },
     song_3: {
       cover: "/images/sali_sali.jpg",
       name: "Sali Sali",
-      ver: "Original",
+      ver: "original",
+      id: 3,
     },
     song_4: {
       cover: "/images/dathin_allan.jpeg",
       name: "Dathin Allan",
-      ver: "Original",
+      ver: "original",
+      id: 4,
     },
   },
   performances: {

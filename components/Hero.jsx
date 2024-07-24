@@ -91,7 +91,7 @@ function Hero() {
           className="mt-[-45px] w-full flex flex-col items-center"
         >
           <h1 className="text-center text-white pb-2">get to know me</h1>
-          <Image ref={floatRef} src={dropdown_arrow} width={20} height={20} />
+          <Image ref={floatRef} alt="dropdown_arrow" src={dropdown_arrow} width={20} height={20} />
         </div>
       </div>
     </div>

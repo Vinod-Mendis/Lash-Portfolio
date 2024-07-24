@@ -45,7 +45,7 @@ function Navbar() {
       <Link href={"/"}>
         <h1 className="text-xl">LASH.</h1>
       </Link>
-      <ul className="hidden md:flex flex-col text-right md:flex-row gap-0 md:gap-6">
+      <ul className="hidden md:flex flex-col text-right md:flex-row gap-0 md:gap-2">
         {Object.entries(content.nav_items).map(([key, item]) => (
           <Link href={item.route} key={key}>
             <li className='bg-transparent hover:bg-[#dedede] hover:text-black transition px-4 py-2 rounded-full' >{item.text}</li>

@@ -60,6 +60,8 @@ function Preloader() {
       isMounted = false;
     };
   }, [currentValue]);
+
+  
   return (
     <div
       ref={preloader}
