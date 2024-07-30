@@ -7,10 +7,14 @@ import { useState } from "react";
 import AudioPlayer from "@/components/AudioPlayer";
 
 function songs() {
-  const [selectedSong, setSelectedSong] = useState(null);
+  const [selectedSong, setSelectedSong] = useState(content.songs.song_4);
+  const [playingSong, setPlayingSong] = useState(content.songs.song_4.mp3File);
+  
 
   const handleSongClick = (song) => {
     setSelectedSong(song);
+    setPlayingSong(song.mp3File);
+    console.log(song.mp3File);
   };
 
   return (
@@ -20,7 +24,7 @@ function songs() {
       <div className="bg-green-600 h-full md:w-[60%] relative">
         <div className="absolute top-0 bg-desktop-song-gradient h-full w-full"></div>
         <div className="md:pl-[100px] px-[20px] md:px-0 mt-20 absolute z-10">
-          <div className="items-end  flex">
+          <div className="items-end flex">
             <h1 className="text-5xl md:text-8xl font-bold text-white">
               {selectedSong ? selectedSong.name : "Dathin Allan"}
             </h1>
@@ -32,8 +36,7 @@ function songs() {
             Lashan Herath
           </h1>
         </div>
-        <div className="absolute bottom-0 z-10">
-        </div>
+        <div className="absolute bottom-0 z-10"></div>
         <Image
           src={selectedSong ? selectedSong.cover : cover}
           alt="cover_image"
@@ -41,8 +44,8 @@ function songs() {
           height={400}
           className="object-cover h-full w-full"
         />
-        <div className="absolute z-10 bottom-0 text-black">
-          <AudioPlayer/>
+        <div className="absolute z-10 bottom-0 text-black flex w-full items-center justify-center">
+          <AudioPlayer currentSong={playingSong} />
         </div>
       </div>
 
@@ -78,7 +81,7 @@ function songs() {
           <div className="w-full h-px bg-gray-300 mt-2 mb-4"></div>
 
           <div
-            className="flex flex-col gap-3 overflow-y-auto pb-24"
+            className="flex flex-col gap-3 overflow-y-scroll pb-24"
             style={{ maxHeight: "calc(100vh - 300px)" }}
           >
             {Object.entries(content.songs)
@@ -89,13 +92,13 @@ function songs() {
                   className="cursor-pointer flex items-end gap-4 hover:bg-gray-100 rounded-md transition"
                   onClick={() => handleSongClick(song)}
                 >
-                  <div className="w-32 song">
+                  <div className="w-32">
                     <Image
                       src={song.cover}
                       alt="cover_image"
                       width={400}
                       height={400}
-                      className="object-cover h-full w-full rounded-md"
+                      className="h-full w-full rounded-md"
                     />
                   </div>
                   <div>
