@@ -4,11 +4,11 @@ const content = {
   nav_items: {
     about: {
       text: "About",
-      route: "/#about",
+      route: "/about",
     },
     songs: {
       text: "Songs",
-      route: "/#songs",
+      route: "/songs",
     },
     performances: {
       text: "Performances",
@@ -25,28 +25,28 @@ const content = {
       name: "HithOchcham",
       ver: "acoustic",
       id: 1,
-      mp3File: '/music/hithOchcham_acoustic.mp3',
+      mp3File: "/music/hithOchcham_acoustic.mp3",
     },
     song_2: {
       cover: "/images/hithOchcham.jpg",
       name: "HithOchcham",
       ver: "original",
       id: 2,
-      mp3File: '/music/hithOchcham.mp3',
+      mp3File: "/music/hithOchcham.mp3",
     },
     song_3: {
       cover: "/images/sali_sali.jpg",
       name: "Sali Sali",
       ver: "original",
       id: 3,
-      mp3File: '/music/sali_sali.mp3',
+      mp3File: "/music/sali_sali.mp3",
     },
     song_4: {
       cover: "/images/dathin_allan.jpeg",
       name: "Dathin Allan",
       ver: "original",
       id: 4,
-      mp3File: '/music/dathin_allan.mp3',
+      mp3File: "/music/dathin_allan.mp3",
     },
   },
   performances: {
@@ -68,23 +68,23 @@ const content = {
   },
   socials: {
     instagram: {
-      logo: '/icons/instagram.svg',
-      link: 'https://www.instagram.com/______lashan_herath_/'
+      logo: "/icons/instagram.svg",
+      link: "https://www.instagram.com/______lashan_herath_/",
     },
     facebook: {
-      logo: '/icons/facebook.svg',
-      link: 'https://web.facebook.com/wizard.6000/?_rdc=1&_rdr'
+      logo: "/icons/facebook.svg",
+      link: "https://web.facebook.com/wizard.6000/?_rdc=1&_rdr",
     },
     youtube: {
-      logo: '/icons/youtube.svg',
-      link: 'https://www.youtube.com/channel/UCOVJ5R_XeTs4TU0FohaXG6w'
+      logo: "/icons/youtube.svg",
+      link: "https://www.youtube.com/channel/UCOVJ5R_XeTs4TU0FohaXG6w",
     },
     spotify: {
-      logo: '/icons/spotify.svg',
-      link: 'https://open.spotify.com/artist/2GKt5532rbjOVlrGyvVHcC?si=SivOnKxnSjSBxNG3wHBDZg'
+      logo: "/icons/spotify.svg",
+      link: "https://open.spotify.com/artist/2GKt5532rbjOVlrGyvVHcC?si=SivOnKxnSjSBxNG3wHBDZg",
     },
   },
-  marquee_images : {
+  marquee_images: {
     image1: "/images/marquee/m1.jpg",
     image2: "/images/marquee/m2.jpg",
     image3: "/images/marquee/m3.jpeg",

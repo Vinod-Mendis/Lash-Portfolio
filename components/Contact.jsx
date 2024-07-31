@@ -127,7 +127,7 @@ function Contact() {
             </h1>
             <Image src={next} alt="next_icon" width={20} height={20} />
           </div>
-          <form action="submit" className="px-[20px] md:pr-[100px] flex flex-col gap-4 mb-5">
+          <form className="px-[20px] md:pr-[100px] flex flex-col gap-4 mb-5">
             <div className="flex flex-col">
               <label className="text-gray-400">Your name</label>
               <input
@@ -153,15 +153,12 @@ function Contact() {
               <label className="text-gray-400">Your message</label>
               <textarea className="text-gray-200 bg-transparent outline-none border-b-2 border-gray-400 px-2 py-2 h-48 md:h-32"></textarea>
             </div>
+          </form>
             <div className="w-full">
-              <button
-                type="submit"
-                className="border-2 border-[#dedede] text-[#dedede] text-xl py-2 px-14 rounded-full mt-2 hover:bg-[#dedede] transition hover:text-[#101010]"
-              >
+              <button className="border-2 border-[#dedede] text-[#dedede] text-xl py-2 px-14 rounded-full mt-2 hover:bg-[#dedede] transition hover:text-[#101010]">
                 Send
               </button>
             </div>
-          </form>
         </div>
       </div>
 
