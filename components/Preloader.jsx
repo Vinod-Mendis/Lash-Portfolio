@@ -65,7 +65,7 @@ function Preloader() {
   return (
     <div
       ref={preloader}
-      className="fixed bg-[#dedede] min-h-screen flex flex-col items-center justify-center inset-0 z-10 overflow-y-auto"
+      className="fixed bg-[#dedede] min-h-screen flex flex-col items-center justify-center inset-0 z-30 overflow-y-auto"
     >
       <h1 className="text-sm font-bold justify-center w-fit md:text-2xl md:font-semibold">
         FORGET ME, DON`T FORGET US.
