@@ -17,10 +17,10 @@ function AboutPage() {
           </h1>
         </div>
         <p className="w-72 md:w-full md:text-xl md:leading-relaxed text-white leading-relaxed mt-4">
-          I am a rising star in Sri Lanka's music scene, celebrated for his
+          I am a rising star in Sri Lanka&apos;s music scene, celebrated for his
           soulful voice and magnetic performances. Hailing from Colombo, he
           blends traditional Sri Lankan melodies with contemporary global
-          influences. With hit singles and a growing fan base, Lashan's music
+          influences. With hit singles and a growing fan base, Lashan&apos;s music
           spans upbeat tracks and heartfelt ballads that resonate deeply. Known
           for his dynamic live shows, including a standout performance at the
           Premadari concert.

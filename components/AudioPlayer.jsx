@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import styles from "../styles/AudioPlayer.module.css";
 import { FaPlay, FaPause } from "react-icons/fa";
 
@@ -26,14 +26,23 @@ function AudioPlayer({ currentSong }) {
     }
   };
 
-  const whilePlaying = () => {
+  const changePlayerCurrentTime = useCallback(() => {
+    if (progressBar.current) {
+      progressBar.current.style.setProperty(
+        "--seek-before-width",
+        `${(progressBar.current.value / duration) * 100}%`
+      );
+      setCurrentTime(progressBar.current.value);
+    }
+  }, [duration]);
+
+  const whilePlaying = useCallback(() => {
     if (progressBar.current && audioPlayer.current) {
-      // Request animation frame and update progress bar value
       animationRef.current = requestAnimationFrame(whilePlaying);
       progressBar.current.value = audioPlayer.current.currentTime;
       changePlayerCurrentTime();
     }
-  };
+  }, [changePlayerCurrentTime]);
 
   const changeRange = () => {
     if (audioPlayer.current && progressBar.current) {
@@ -42,18 +51,7 @@ function AudioPlayer({ currentSong }) {
     }
   };
 
-  const changePlayerCurrentTime = () => {
-    if (progressBar.current) {
-      progressBar.current.style.setProperty(
-        "--seek-before-width",
-        `${(progressBar.current.value / duration) * 100}%`
-      );
-      setCurrentTime(progressBar.current.value);
-    }
-  };
-
   useEffect(() => {
-    // Ensure that audioPlayer and progressBar refs are defined
     if (audioPlayer.current) {
       audioPlayer.current.pause();
       audioPlayer.current.currentTime = 0;
@@ -65,7 +63,6 @@ function AudioPlayer({ currentSong }) {
 
     const handleLoadedMetadata = () => {
       if (audioPlayer.current && progressBar.current) {
-        // Set the duration and update progress bar max value
         const seconds = Math.floor(audioPlayer.current.duration);
         setDuration(seconds);
         progressBar.current.max = seconds;
@@ -78,46 +75,40 @@ function AudioPlayer({ currentSong }) {
 
     const audioRef = audioPlayer.current;
     if (audioRef) {
-      // Add event listener to handle metadata loading
       audioRef.addEventListener("loadedmetadata", handleLoadedMetadata);
     }
 
     return () => {
       if (audioRef) {
-        // Clean up event listener on component unmount
         audioRef.removeEventListener("loadedmetadata", handleLoadedMetadata);
       }
     };
-  }, [currentSong]);
+  }, [currentSong, isPlaying, whilePlaying]);
 
   useEffect(() => {
     const handleAudioEnd = () => {
       if (audioPlayer.current && progressBar.current) {
-        // Set progress bar to full duration on audio end
         progressBar.current.value = audioPlayer.current.duration;
         setCurrentTime(audioPlayer.current.duration);
         changePlayerCurrentTime();
-        setIsPlaying(false); // Stop the animation
+        setIsPlaying(false);
       }
     };
 
     const audioRef = audioPlayer.current;
     if (audioRef) {
-      // Add event listener to handle audio end
       audioRef.addEventListener("ended", handleAudioEnd);
     }
 
     return () => {
       if (audioRef) {
-        // Clean up event listener on component unmount
         audioRef.removeEventListener("ended", handleAudioEnd);
       }
     };
-  }, []);
+  }, [changePlayerCurrentTime]);
 
   useEffect(() => {
     if (audioPlayer.current && progressBar.current) {
-      // Initial setup of duration and progress bar max value
       const seconds = Math.floor(audioPlayer.current.duration);
       setDuration(seconds);
       progressBar.current.max = seconds;
@@ -126,7 +117,7 @@ function AudioPlayer({ currentSong }) {
         animationRef.current = requestAnimationFrame(whilePlaying);
       }
     }
-  }, [audioPlayer.current]);
+  }, [isPlaying, whilePlaying]);
 
   const calculateDuration = (secs) => {
     const minutes = Math.floor(secs / 60);

@@ -73,8 +73,8 @@ function Songs() {
       --------------------------------------------------------------------------------- */}
       <p className="px-[20px] reveal_type_2 text-[26px] md:text-[28px] font-semibold leading-tight md:leading-normal w-[90%] md:w-[530px] mt-10 mb-3">
         Music is a world with a language we all understand, giving everyone a
-        chance to sing, dance, and clap. A record's groove doesn't guarantee
-        it's in the groove, but you can tell when people start to move.
+        chance to sing, dance, and clap. A record&apos;s groove doesn&apos;t guarantee
+        it&apos;s in the groove, but you can tell when people start to move.
       </p>
 
       {/* bottom section
@@ -94,13 +94,14 @@ function Songs() {
         </div>
       </div>
 
-      {/* baclhround text 
+      {/* background text 
       -----------------------------------------*/}
       <Image
         className="absolute right-0 bottom-0"
         src={lash}
         width={1000}
         height={1000}
+        alt="background text"
       />
     </div>
   );

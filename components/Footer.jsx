@@ -54,7 +54,7 @@ function Footer() {
         </div>
         <div className="px-[20px] flex justify-between mb-8 md:flex md:flex-col md:gap-2 md:items-end">
           {Object.entries(content.socials).map(([key, social]) => (
-            <Link href={social.link} className="md:bg-[#101010] md:px-3 md:py-3 md:rounded-full transition hover:invert active:invert-0">
+            <Link key={key} href={social.link} className="md:bg-[#101010] md:px-3 md:py-3 md:rounded-full transition hover:invert active:invert-0">
               <Image src={social.logo} alt="logo" width={35} height={35}/>
             </Link>
           ))}

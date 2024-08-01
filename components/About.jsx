@@ -54,13 +54,14 @@ function About() {
             src={wave_icon}
             width={45}
             height={45}
+            alt="wave_icon"
           />
         </div>
         <h1
           ref={text_reveal}
           className="reveal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
         >
-          I'm{" "}
+          I &apos; m{" "}
           <span className="text-[30px] md:text-[44px] font-semibold">
             Lashan Herath
           </span>
@@ -68,7 +69,7 @@ function About() {
           <span className="text-[30px] md:text-[44px] font-semibold">
             music
           </span>{" "}
-          from an early age, I’m making waves with my{" "}
+          from an early age, I&apos;m making waves with my{" "}
           <span className="text-[30px] md:text-[44px] font-semibold">
             unique
           </span>{" "}

@@ -6,7 +6,7 @@ import content from "@/content/content";
 import { useState } from "react";
 import AudioPlayer from "@/components/AudioPlayer";
 
-function songs() {
+function SongsPage() {
   const [selectedSong, setSelectedSong] = useState(content.songs.song_4);
   const [playingSong, setPlayingSong] = useState(content.songs.song_4.mp3File);
   
@@ -125,4 +125,4 @@ function songs() {
   );
 }
 
-export default songs;
+export default SongsPage;
