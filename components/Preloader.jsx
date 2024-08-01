@@ -67,10 +67,10 @@ function Preloader() {
       ref={preloader}
       className="fixed bg-[#dedede] min-h-screen flex flex-col items-center justify-center inset-0 z-30 overflow-y-auto"
     >
-      <h1 className="text-sm font-bold justify-center w-fit md:text-2xl md:font-semibold">
+      <h1 className="text-base font-bold justify-center mb-20 md:mb-0 w-fit md:text-2xl md:font-semibold">
         FORGET ME, DON`T FORGET US.
       </h1>
-      <div ref={counter} className="absolute bottom-0 w-full text-center mb-10">
+      <div ref={counter} className="absolute bottom-0 w-full text-center mb-20 md:mb-20">
         <h1>{currentValue}.</h1>
       </div>
     </div>

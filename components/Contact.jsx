@@ -154,7 +154,7 @@ function Contact() {
               <textarea className="text-gray-200 bg-transparent outline-none border-b-2 border-gray-400 px-2 py-2 h-48 md:h-32"></textarea>
             </div>
           </form>
-            <div className="w-full">
+            <div className="w-full pl-[20px] md:pl-0">
               <button className="border-2 border-[#dedede] text-[#dedede] text-xl py-2 px-14 rounded-full mt-2 hover:bg-[#dedede] transition hover:text-[#101010]">
                 Send
               </button>
