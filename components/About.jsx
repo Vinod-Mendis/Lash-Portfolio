@@ -57,24 +57,26 @@ function About() {
             alt="wave_icon"
           />
         </div>
-        <h1
-          ref={text_reveal}
-          className="max-w-[1440px] veal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
-        >
-          I &apos; m{" "}
-          <span className="text-[30px] md:text-[44px] font-semibold">
-            Lashan Herath
-          </span>
-          , a rising star in Sinhala pop music. Passionate about
-          <span className="text-[30px] md:text-[44px] font-semibold">
-            music
-          </span>{" "}
-          from an early age, I&apos;m making waves with my{" "}
-          <span className="text-[30px] md:text-[44px] font-semibold">
-            unique
-          </span>{" "}
-          style and captivating performances.
-        </h1>
+        <div className="max-w-[1440px] flex justify-center items-center">
+          <h1
+            ref={text_reveal}
+            className="veal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
+          >
+            I &apos; m{" "}
+            <span className="text-[30px] md:text-[44px] font-semibold">
+              Lashan Herath
+            </span>
+            , a rising star in Sinhala pop music. Passionate about
+            <span className="text-[30px] md:text-[44px] font-semibold">
+              music
+            </span>{" "}
+            from an early age, I&apos;m making waves with my{" "}
+            <span className="text-[30px] md:text-[44px] font-semibold">
+              unique
+            </span>{" "}
+            style and captivating performances.
+          </h1>
+        </div>
       </div>
       <div className="w-full h-px bg-black my-[20px] md:my-[30px]"></div>
       <div className="w-full relative">
@@ -89,7 +91,7 @@ function About() {
             <h1 className="text-center w-full text-[74px] md:text-[100px] font-semibold leading-none">
               Musician.
             </h1>
-            <Link href={'/about'}>
+            <Link href={"/about"}>
               <button className="active:bg-transparent active:text-[#dedede] hover:bg-[#dedede] transition hover:text-black font-semibold md:mt-0 mt-3 text-xl border-2 border-[#dedede] px-14 py-2 md:py-1 rounded-full flex justify-center items-center">
                 more
               </button>
