@@ -47,7 +47,7 @@ function About() {
   return (
     <div className="h-full bg-slate-white " id="about">
       <div className="px-[25px] md:px-[100px]">
-        <div className="flex justify-center w-full ">
+        <div className="flex justify-center w-full items-center">
           <Image
             ref={wave}
             className="my-[25px] md:w-10"
@@ -60,7 +60,7 @@ function About() {
         <div className="max-w-[1440px] flex justify-center items-center">
           <h1
             ref={text_reveal}
-            className="veal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
+            className=" reveal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
           >
             I &apos; m{" "}
             <span className="text-[30px] md:text-[44px] font-semibold">
