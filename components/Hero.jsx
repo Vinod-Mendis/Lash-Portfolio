@@ -58,7 +58,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="h-screen bg-slate-800">
+    <div className="h-screen bg-gray-800">
       <div className="w-full h-full relative">
         <video autoPlay muted loop className="hidden md:flex w-full h-full object-cover">
           <source src="/videos/hero_video.mp4" type="video/mp4" />

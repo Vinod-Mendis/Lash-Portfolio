@@ -18,10 +18,10 @@ function SongsPage() {
   };
 
   return (
-    <div className="h-full md:h-screen bg-gray-700 flex flex-col md:flex-row">
+    <div className="h-full md:h-screen bg-gray-800 flex flex-col md:flex-row">
       {/* left side
       -------------------------------------------------------- */}
-      <div className="bg-green-600 h-full md:w-[60%] relative">
+      <div className="bg-gray-800 h-full md:w-[60%] relative">
         <div className="absolute top-0 bg-desktop-song-gradient h-full w-full"></div>
         <div className="md:pl-[100px] px-[20px] md:px-0 mt-20 absolute z-10">
           <div className="items-end flex">
