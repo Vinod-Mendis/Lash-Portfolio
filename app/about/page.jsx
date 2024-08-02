@@ -49,6 +49,9 @@ function AboutPage() {
           </p>
         </div>
       </div>
+
+      {/* Marquee
+      -------------------------------------------------------------------------- */}
       <div className="w-screen overflow-x-hidden mt-8">
         <Marquee autoFill>
           {Object.entries(content.marquee_images).map(([key, image]) => (
@@ -84,6 +87,9 @@ function AboutPage() {
           <div className="w-full h-px bg-white my-10 relative z-10"></div>
         </div>
       </div>
+
+      {/* background video
+      --------------------------------------------------------------------------- */}
       <div className="w-full h-screen z-0 absolute top-0">
         <video
           autoPlay

@@ -57,6 +57,9 @@ function About() {
             alt="wave_icon"
           />
         </div>
+
+        {/* about description
+        -------------------------------------------------------------------  */}
         <div className="flex justify-center items-center">
           <h1
             ref={text_reveal}
@@ -79,6 +82,9 @@ function About() {
         </div>
       </div>
       <div className="w-full h-px bg-black my-[20px] md:my-[30px]"></div>
+
+      {/* about video
+      -------------------------------------------------------------------- */}
       <div className="w-full relative">
         <video autoPlay muted loop className="hidden md:flex w-full h-full ">
           <source src="/videos/about_video_2.mp4" type="video/mp4" />

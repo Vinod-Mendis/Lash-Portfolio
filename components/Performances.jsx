@@ -69,15 +69,18 @@ function Performances() {
       className="h-full lg:h-screen bg-[#101010] relative overflow-hidden"
       id="performances"
     >
-      {/* Header section */}
+      {/* Header section 
+      ------------------------------------------------------------------------------*/}
       <div className="w-full pt-5 flex flex-col px-[20px] md:px-[100px] absolute z-30">
         <h1 className="text-white text-[30px] font-semibold">Performances</h1>
         <div className="w-full h-px bg-white mb-10"></div>
       </div>
 
-      {/* Under content */}
+      {/* Under content 
+      --------------------------------------------------------------------*/}
       <div className="flex flex-col lg:flex-row h-full relative">
-        {/* Left-container */}
+        {/* Left-container 
+        -------------------------------------------------------------------------------*/}
         <div className="relative">
           <video autoPlay muted loop className="w-full h-auto md:flex z-10">
             <source src="/videos/performance_video.mp4" type="video/mp4" />
@@ -96,7 +99,8 @@ function Performances() {
           </div>
         </div>
 
-        {/* Right-container */}
+        {/* Right-container 
+        ------------------------------------------------------------------------*/}
         <div className="text-white mb-10 md:mb-10 md:pr-[100px] w-full md:items-end flex flex-col px-[20px] md:mt-[140px] justify-center">
           <div className="flex gap-4">
             {Object.entries(images).map(([key, src], index) => (

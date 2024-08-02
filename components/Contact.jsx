@@ -86,6 +86,9 @@ function Contact() {
 
   return (
     <div className="h-full md:h-screen bg-[#101010] relative" id="reach-out">
+
+      {/* Header text animation
+      ------------------------------------------------------------------------------- */}
       <div className="pt-2 justify-center flex flex-row items-center px-[20px] md:px-[100px] lg:gap-24 gap-6 w-full md:absolute md:z-10 ">
         <h1
           ref={reach}
@@ -110,6 +113,9 @@ function Contact() {
       </div>
 
       <div className="md:flex h-full w-full ">
+
+        {/* left side - desktop 
+        ------------------------------------------------------------------- */}
         <div className="relative hidden md:flex w-1/2">
           <Image
             className="object-cover h-auto w-full"
@@ -120,6 +126,9 @@ function Contact() {
 
           <div className="absolute bg-mobile-contact-gradient top-0 w-full h-screen flex items-center justify-end px-[20px]"></div>
         </div>
+
+        {/* right side
+        -----------------------------------------------------------------  */}
         <div className="w-full md:w-1/2 md:mt-44 2xl:mt-80">
           <div className="px-[20px] md:pr-[100px] flex gap-4 items-center mt-14 mb-6 md:mb-10">
             <h1 className="font-regular text-white">
@@ -127,6 +136,9 @@ function Contact() {
             </h1>
             <Image src={next} alt="next_icon" width={20} height={20} />
           </div>
+
+          {/* Contact Form 
+          ----------------------------------------------------------------------*/}
           <form className="px-[20px] md:pr-[100px] flex flex-col gap-4 mb-5">
             <div className="flex flex-col">
               <label className="text-gray-400">Your name</label>
@@ -154,6 +166,8 @@ function Contact() {
               <textarea className="text-gray-200 bg-transparent outline-none border-b-2 border-gray-400 px-2 py-2 h-48 md:h-32"></textarea>
             </div>
           </form>
+          {/* send button
+          ---------------------------------------------------- */}
             <div className="w-full pl-[20px]">
               <button className="border-2 border-[#dedede] text-[#dedede] text-xl py-2 px-14 rounded-full mt-2 hover:bg-[#dedede] transition hover:text-[#101010]">
                 Send
@@ -162,6 +176,8 @@ function Contact() {
         </div>
       </div>
 
+      {/* left side - mobile
+      ------------------------------------------------------------------- */}
       <div className="relative md:hidden">
         <Image
           className="w-full"
