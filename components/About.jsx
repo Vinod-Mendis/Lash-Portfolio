@@ -59,7 +59,7 @@ function About() {
         </div>
         <h1
           ref={text_reveal}
-          className="reveal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
+          className="max-w-[1440px] veal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
         >
           I &apos; m{" "}
           <span className="text-[30px] md:text-[44px] font-semibold">
