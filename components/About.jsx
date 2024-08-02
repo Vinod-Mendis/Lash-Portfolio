@@ -57,10 +57,10 @@ function About() {
             alt="wave_icon"
           />
         </div>
-        <div className="max-w-[1440px] flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <h1
             ref={text_reveal}
-            className=" reveal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
+            className="max-w-[1240px] reveal_type_1 text-[20px] md:text-[25px] leading-tight md:leading-none text-center"
           >
             I &apos; m{" "}
             <span className="text-[30px] md:text-[44px] font-semibold">
