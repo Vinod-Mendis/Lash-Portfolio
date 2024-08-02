@@ -17,9 +17,9 @@ function Footer() {
     <div className="bg-[#101010] relative z-30">
       <div className="md:flex md:justify-between md:pb-16 md:px-[100px] md:pt-10 relative z-10">
         {/* --------------------- */}
-        <div className="md:w-[400px] ">
+        <div className="md:w-[400px] 2xl:w-[500px]">
           <div className="px-[20px] md:px-0  flex pt-10 md:pt-0 md:justify-between">
-            <h1 className="text-5xl md:text-3xl md:w-11 font-semibold text-white">
+            <h1 className="text-5xl md:text-3xl 2xl:text-4xl md:w-11 font-semibold text-white">
               LASHAN HERATH,
             </h1>
             <Image
@@ -30,7 +30,7 @@ function Footer() {
               height={80}
             />
           </div>
-          <h1 className="px-[20px] md:px-0 text-sm mt-4 text-white">
+          <h1 className="px-[20px] md:px-0 text-sm 2xl:text-lg mt-4 text-white">
             a rising star in Sinhala pop music. Passionate about music from an
             early age, I’m making waves with my unique style and captivating
             performances.

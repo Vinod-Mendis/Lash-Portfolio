@@ -57,7 +57,7 @@ function Songs() {
         {Object.entries(content.songs).map(([key, song]) => (
           <div className="flex flex-col items-center min-w-max mx-2" key={key}>
             <Image
-              className="rounded-md"
+              className="rounded-md 2xl:w-[400px]"
               src={song.cover}
               alt="song_cover"
               width={280}
@@ -71,7 +71,7 @@ function Songs() {
 
       {/* Paragraph with reveal animation
       --------------------------------------------------------------------------------- */}
-      <p className="px-[20px] reveal_type_2 text-[26px] md:text-[28px] font-semibold leading-tight md:leading-normal w-[90%] md:w-[530px] mt-10 mb-3">
+      <p className="px-[20px] reveal_type_2 text-[26px] md:text-[28px] 2xl:text-[30px] font-semibold leading-tight md:leading-normal w-[90%] md:w-[530px] 2xl:w-[600px] mt-10 mb-3">
         Music is a world with a language we all understand, giving everyone a
         chance to sing, dance, and clap. A record&apos;s groove doesn&apos;t guarantee
         it&apos;s in the groove, but you can tell when people start to move.
@@ -87,7 +87,7 @@ function Songs() {
           </button>
         </Link>
         <div className="flex md:flex-row flex-col w-full items-end md:items-center pt-6 md:pt-0 gap-2">
-          <div className="w-[90%] md:w-[80%] h-px bg-black"></div>
+          <div className="w-[90%] md:w-[80%] 2xl:md:w-[85%] h-px bg-black"></div>
           <p className="text-left md:text-center font-semibold text-xs md:text-sm">
             Enjoy the chill of my music.
           </p>

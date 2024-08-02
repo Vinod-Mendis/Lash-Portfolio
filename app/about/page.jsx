@@ -8,15 +8,15 @@ function AboutPage() {
   return (
     <div className="relative bg-gray-800">
       <div className="px-[20px] md:px-[100px] pt-28 relative z-10">
-        <div className="md:flex gap-10">
-          <h1 className="text-[80px] leading-none md:text-8xl text-white font-bold">
+        <div className="md:flex gap-10 text-[80px] leading-none md:text-8xl 2xl:text-9xl text-white font-bold">
+          <h1>
             LASHAN
           </h1>
-          <h1 className="text-[80px] leading-none md:text-8xl text-white font-bold">
+          <h1>
             HERATH.
           </h1>
         </div>
-        <p className="w-72 md:w-full md:text-xl md:leading-relaxed text-white leading-relaxed mt-4">
+        <p className="w-72 md:w-full md:text-xl 2xl:text-2xl md:leading-relaxed text-white leading-relaxed mt-4">
           I am a rising star in Sri Lanka&apos;s music scene, celebrated for his
           soulful voice and magnetic performances. Hailing from Colombo, he
           blends traditional Sri Lankan melodies with contemporary global

@@ -120,7 +120,7 @@ function Contact() {
 
           <div className="absolute bg-mobile-contact-gradient top-0 w-full h-screen flex items-center justify-end px-[20px]"></div>
         </div>
-        <div className="w-full md:w-1/2 md:mt-44">
+        <div className="w-full md:w-1/2 md:mt-44 2xl:mt-80">
           <div className="px-[20px] md:pr-[100px] flex gap-4 items-center mt-14 mb-6 md:mb-10">
             <h1 className="font-regular text-white">
               Make your concert truly unforgettable!
@@ -154,7 +154,7 @@ function Contact() {
               <textarea className="text-gray-200 bg-transparent outline-none border-b-2 border-gray-400 px-2 py-2 h-48 md:h-32"></textarea>
             </div>
           </form>
-            <div className="w-full pl-[20px] md:pl-0">
+            <div className="w-full pl-[20px]">
               <button className="border-2 border-[#dedede] text-[#dedede] text-xl py-2 px-14 rounded-full mt-2 hover:bg-[#dedede] transition hover:text-[#101010]">
                 Send
               </button>

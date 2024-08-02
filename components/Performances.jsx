@@ -65,7 +65,10 @@ function Performances() {
   }, []);
 
   return (
-    <div className="h-full lg:h-screen bg-[#101010] relative overflow-hidden" id="performances">
+    <div
+      className="h-full lg:h-screen bg-[#101010] relative overflow-hidden"
+      id="performances"
+    >
       {/* Header section */}
       <div className="w-full pt-5 flex flex-col px-[20px] md:px-[100px] absolute z-30">
         <h1 className="text-white text-[30px] font-semibold">Performances</h1>
@@ -81,7 +84,7 @@ function Performances() {
           </video>
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="bg-mobile-gradient md:bg-desktop-gradient w-full h-full absolute top-0 z-20">
-              <div className="absolute bottom-0 px-[20px] md:px-[100px] text-white mb-14">
+              <div className="absolute bottom-8 px-[20px] md:px-[100px] text-white mb-14">
                 <h1 className="uppercase text-[40px] font-semibold leading-none">
                   premadari
                 </h1>
@@ -98,7 +101,13 @@ function Performances() {
           <div className="flex gap-4">
             {Object.entries(images).map(([key, src], index) => (
               <div key={key} ref={(el) => (imageRefs.current[index] = el)}>
-                <Image src={src} alt={key} width={300} height={300} />
+                <Image
+                  src={src}
+                  alt={key}
+                  width={300}
+                  height={300}
+                  className="2xl:w-[400px]"
+                />
               </div>
             ))}
           </div>
@@ -109,7 +118,7 @@ function Performances() {
               <h1 className="text-[48px] font-bold">MARCH</h1>
             </div>
           </div>
-          <p className="text-justify w-full h-full font-regular leading-relaxed reveal_type_3">
+          <p className="text-justify w-full h-full font-regular leading-relaxed reveal_type_3 2xl:text-lg">
             Premadari, a mesmerizing cinematic musical concert, took place on
             March 16th, showcasing a diverse lineup of talented artists
             including Me. The evening unfolded with spellbinding performances
@@ -117,10 +126,10 @@ function Performances() {
             bringing their unique style to the stage. The atmosphere was
             electric as attendees immersed themselves in the ethereal melodies
             and captivating visuals, creating an unforgettable experience that
-            resonated long after the final note faded. Premadari, meaning &quot;lover
-            of melodies&quot; in an ancient tongue, enchanted audiences with its
-            fusion of music and visual storytelling, leaving all who attended
-            inspired and uplifted by the power of music.
+            resonated long after the final note faded. Premadari, meaning
+            &quot;lover of melodies&quot; in an ancient tongue, enchanted
+            audiences with its fusion of music and visual storytelling, leaving
+            all who attended inspired and uplifted by the power of music.
           </p>
         </div>
       </div>
