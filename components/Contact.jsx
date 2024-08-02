@@ -85,7 +85,7 @@ function Contact() {
   });
 
   return (
-    <div className="h-full md:h-screen bg-[#101010] relative" id="reach-out">
+    <div className="h-full bg-[#101010] relative" id="reach-out">
       {/* Header text animation
       ------------------------------------------------------------------------------- */}
       <div className="pt-2 justify-center flex flex-row items-center px-[20px] md:px-[100px] lg:gap-24 gap-6 w-full md:absolute md:z-10 ">
@@ -112,11 +112,12 @@ function Contact() {
       </div>
 
       <div className="md:flex h-full w-full ">
+        
         {/* left side - desktop 
         ------------------------------------------------------------------- */}
-        <div className="relative hidden md:flex w-1/2">
+        <div className="relative h-screen hidden md:flex w-1/2">
           <Image
-            className="object-cover h-auto w-full"
+            className="object-cover h-screen w-full"
             src={contact_image}
             alt="contact_image"
             layout="responsive"

@@ -76,7 +76,7 @@ function Hero() {
                 LASHAN
               </h1>
             </div>
-            <div className="overflow-hidden mt-[-8px] md:mt-[-20px]">
+            <div className="overflow-hidden mt-[-8px] md:mt-[-20px] md:mr-2">
               <h1
                 ref={herath}
                 className="font-semibold text-[#dedede] text-[20px] md:text-[30px] leading-none "
