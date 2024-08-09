@@ -53,7 +53,7 @@ function Songs() {
 
       {/* songs :-- mobile : scrollable & desktop wrap down
       -------------------------------------------------------------------------------------------------------  */}
-      <div className="scroll-smooth flex overflow-x-auto md:overflow-hidden md:flex-wrap w-full justify-around md:justify-between">
+      <div className="scroll-smooth flex overflow-x-auto md:overflow-hidden md:flex-wrap w-full justify-around md:justify-between gap-y-4">
         {Object.entries(content.songs).map(([key, song]) => (
           <div className="flex flex-col items-center min-w-max mx-2" key={key}>
             <Image

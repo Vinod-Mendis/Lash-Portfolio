@@ -48,6 +48,13 @@ const content = {
       id: 4,
       mp3File: "/music/dathin_allan.mp3",
     },
+    song_5: {
+      cover: "/images/oya_hinawa.jpg",
+      name: "Oya Hinawa",
+      ver: "original",
+      id: 4,
+      mp3File: "/music/oya_hinawa.mp3",
+    },
   },
   performances: {
     performance_1: {
